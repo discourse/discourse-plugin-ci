@@ -7,7 +7,7 @@ echo "travis_fold:start:starting_docker_container"
 
 docker run \
   -t \
-  -e "COMMIT_HASH=origin/plugin-ci-changes" \
+  -e "COMMIT_HASH=origin/tests-passed" \
   -e "SKIP_CORE=1" \
   -e TRAVIS=$TRAVIS \
   -e SINGLE_PLUGIN=$plugin_name \
