@@ -5,8 +5,8 @@ chmod -R 777 . # This is necessary if your plugin installs gems
 
 echo "travis_fold:start:starting_docker_container"
 
-[ -d './test' ] || RUBY_ONLY=1
-[ -d './spec' ] || JS_ONLY=1
+[ -d './test' ] || export RUBY_ONLY=1
+[ -d './spec' ] || export JS_ONLY=1
 
 echo "RUBY_ONLY=$RUBY_ONLY"
 echo "JS_ONLY=$JS_ONLY"
