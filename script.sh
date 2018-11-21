@@ -17,6 +17,7 @@ docker run \
   -e "SKIP_CORE=1" \
   -e RUBY_ONLY \
   -e JS_ONLY \
+  -e SKIP_LINT \
   -e TRAVIS \
   -e SINGLE_PLUGIN=$plugin_name \
   -v $(pwd):/var/www/discourse/plugins/$plugin_name \
