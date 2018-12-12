@@ -1,4 +1,5 @@
 #!/bin/bash -x
+
 export plugin_name=${PWD##*/}
 echo "PLUGIN_NAME=$plugin_name"
 chmod -R 777 . # This is necessary if your plugin installs gems
@@ -19,6 +20,7 @@ docker run \
   -e JS_ONLY \
   -e SKIP_LINT \
   -e TRAVIS \
-  -e SINGLE_PLUGIN=$plugin_name \
-  -v $(pwd):/var/www/discourse/plugins/$plugin_name \
+  -e SINGLE_PLUGIN=${plugin_name} \
+  -v $(pwd):/var/www/discourse/plugins/${plugin_name} \
+  ${DOCKER_OPTIONS} \
   discourse/discourse_test:release

@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - git clone https://github.com/discourse/discourse-plugin-ci
+  - git clone --depth=1 https://github.com/discourse/discourse-plugin-ci
 
 install: true # Prevent travis doing bundle install
 
